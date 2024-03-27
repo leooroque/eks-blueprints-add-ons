@@ -59,10 +59,9 @@ spec:
               - $values/{{metadata.annotations.addons_repo_basepath}}clusters/{{name}}/addons/{{values.addonChart}}/values.yaml
             values: |
               settings:
-                aws:
-                  clusterName: {{metadata.annotations.aws_cluster_name}}
-                  defaultInstanceProfile: {{metadata.annotations.karpenter_node_instance_profile_name}}
-                  interruptionQueueName: {{metadata.annotations.karpenter_sqs_queue_name}}
+                clusterName: {{metadata.annotations.aws_cluster_name}}
+                defaultInstanceProfile: {{metadata.annotations.karpenter_node_instance_profile_name}}
+                interruptionQueueName: {{metadata.annotations.karpenter_sqs_queue_name}}
               serviceAccount:
                 name: {{metadata.annotations.karpenter_service_account}}
                 annotations:

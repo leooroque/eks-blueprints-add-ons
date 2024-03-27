@@ -4,8 +4,8 @@ karpenter:
   nodeSelector:
     kubernetes.io/os: linux
   settings:
-    aws:
-      clusterName:
-      clusterEndpoint:
-      defaultInstanceProfile:
-      interruptionQueueName:
+    # aws:
+    clusterName:
+    clusterEndpoint:
+    defaultInstanceProfile:
+    interruptionQueueName:
