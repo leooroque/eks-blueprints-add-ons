@@ -82,6 +82,6 @@ spec:
           - ServerSideApply=true # Big CRDs.
       info:
       - name: role
-        value: {{metadata.annotations.karpenter_node_iam_role_name}}
+        value: '{{metadata.annotations.karpenter_node_iam_role_name}}'
       - name: cluster-name
-        value: {{metadata.annotations.aws_cluster_name}}
+        value: '{{metadata.annotations.aws_cluster_name}}'
