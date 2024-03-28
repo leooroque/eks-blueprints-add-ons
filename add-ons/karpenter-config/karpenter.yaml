@@ -47,12 +47,12 @@ metadata:
   name: default
 spec:
   amiFamily: AL2
-  role: '{{values.role}}'
+  role: {{role}}
   securityGroupSelectorTerms:
   - tags:
-      karpenter.sh/discovery: '{{values.role}}'
+      karpenter.sh/discovery: {{cluster-name}}
   subnetSelectorTerms:
   - tags:
-      karpenter.sh/discovery: '{{values.cluster-name}}'
+      karpenter.sh/discovery: {{cluster-name}}
   tags:
     managed-by: karpenter
